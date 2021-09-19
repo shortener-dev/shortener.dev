@@ -7,6 +7,7 @@ import TableContainer from "@mui/material/TableContainer"
 import TableRow from "@mui/material/TableRow"
 import TextField from "@mui/material/TextField"
 import { useState } from "react"
+import { AiFillGithub } from "react-icons/ai"
 import isURL from "validator/lib/isURL"
 import "./App.css"
 import logo from "./logo.svg"
@@ -29,7 +30,7 @@ function FormWithButton(props) {
 			/>
 			<Button 
 				variant="outlined"
-				sx={{ m: 2, height: 56 }}
+				sx={{ m: 3, height: 56 }}
 				size={"large"} 
 				onClick={() => props.createShort(props.text)}
 			>
@@ -148,7 +149,7 @@ function App() {
 
 	return (
 		<>
-			<img src={logo} alt="" className="App-logo" height={200} width={350}/>
+			<img src={logo} alt="" className="App-logo" width={350}/>
 			<div className="App">
 				<FormWithButton 
 					error={error} 
@@ -161,6 +162,11 @@ function App() {
 			</div>
 			<div className="Table">
 				<ShortTable rows={shorts}/>
+			</div>
+			<div className="Github">
+				<Link href="https://github.com/shortener-dev" color="inherit">
+					<AiFillGithub size={50}></AiFillGithub>
+				</Link>
 			</div>
 		</>
 	)
