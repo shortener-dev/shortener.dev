@@ -17,7 +17,7 @@ const API_CREATE_SHORT_ROUTE = "/short"
 
 function FormWithButton(props) {
 	return (
-		<field>
+		<field className="field">
 			<TextField
 				id="outlined-basic"
 				fullWidth={true}

@@ -1,5 +1,4 @@
 .App {
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -30,4 +29,9 @@
     right: 0;
     margin-right: 1%;
     margin-bottom: .5%;
+}
+
+.field {
+    display: flex;
+    align-items: center;
 }
