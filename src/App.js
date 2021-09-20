@@ -17,7 +17,7 @@ const API_CREATE_SHORT_ROUTE = "/short"
 
 function FormWithButton(props) {
 	return (
-		<>
+		<field className="field">
 			<TextField
 				id="outlined-basic"
 				fullWidth={true}
@@ -36,7 +36,7 @@ function FormWithButton(props) {
 			>
 				Shorten
 			</Button>
-		</>
+		</field>
 	)
 }
 
@@ -148,9 +148,9 @@ function App() {
 	}
 
 	return (
-		<>
+		<main>
 			<img src={logo} alt="" className="App-logo" width={350}/>
-			<div className="App">
+			<section className="App">
 				<FormWithButton 
 					error={error} 
 					text={text}
@@ -159,16 +159,16 @@ function App() {
 					createShort={createShort}
 					shorts={shorts}
 				/>
-			</div>
-			<div className="Table">
+			</section>
+			<section className="Table">
 				<ShortTable rows={shorts}/>
-			</div>
-			<div className="Github">
+			</section>
+			<footer className="Github">
 				<Link href="https://github.com/shortener-dev" color="inherit">
 					<AiFillGithub size={50}></AiFillGithub>
 				</Link>
-			</div>
-		</>
+			</footer>
+		</main>
 	)
 }
 
